@@ -4,7 +4,6 @@
 
 
 <div class="field" style="background-image: url('assets/img/board.jpg');">
-   
     <div class="card-stack">
        
         <img  *ngFor="let c of [0,1,2,3]; let i = index; " [ngStyle]="{'left.px': i*5}" 
@@ -14,13 +13,13 @@
 
         <img *ngFor="let card of game.playedCards" class="played-cards" src="assets/img/cards/{{ card }}.png">
 
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="top-card pick-card" style="left: 25px;" 
-            src="assets/img/cards/{{ currentCard }}.png">
+        <img (click)="takeCard()" *ngIf="game.pickCardAnimation" class="top-card pick-card" style="left: 25px;" 
+            src="assets/img/cards/{{ game.currentCard }}.png">
 
     </div>
     
 </div>
-<app-game-info [card]="currentCard" class="pin-bottom"></app-game-info>
+<app-game-info [card]="game.currentCard" class="pin-bottom"></app-game-info>
 
 <button mat-fab color="primary" (click)="openDialog()" aria-label="Example icon button with a delete icon" class="btn-add">
     <mat-icon>add</mat-icon>
