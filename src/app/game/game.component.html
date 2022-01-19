@@ -11,7 +11,7 @@
         <img (click)="takeCard()" class="top-card" style="left: 25px;" src="assets/img/cards_old/card_cover.png">
         
 
-        <img *ngFor="let card of game.playedCards" class="played-cards" src="assets/img/cards/{{ card }}.png">
+        <img *ngFor="let card of game.playedCards" class="played-card" src="assets/img/cards/{{ card }}.png">
 
         <img (click)="takeCard()" *ngIf="game.pickCardAnimation" class="top-card pick-card" style="left: 25px;" 
             src="assets/img/cards/{{ game.currentCard }}.png">
