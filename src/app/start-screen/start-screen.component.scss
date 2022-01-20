@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: center;
 
+    @media(max-width: 960px){
+        overflow: hidden;
+    }
+
     img{
         height: 100vh;
     }
@@ -20,12 +24,18 @@
     display: flex;
     justify-content: center;
     bottom: 100px;
+
+  
     
   
     img{
         width: 40vw;
         height: auto;   
         cursor: pointer;
+
+        @media(max-width: 960px){
+            width: 400px;
+        }
         
         &:hover{
             filter: brightness(1.25);
